@@ -9,6 +9,7 @@ ZSH_THEME="spaceship"
 antigen bundle git
 antigen bundle pip
 antigen bundle command-not-found
+antigen bundle common-aliases
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
