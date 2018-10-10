@@ -1,0 +1,12 @@
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+nmap <F12> <plug>NERDCommenterToggle 
+map <C-t> :NERDTreeToggle<CR>
+nmap <F9> :TagbarToggle<CR>
+nnoremap <S-Left> :bprevious<CR>
+nnoremap <S-Right> :bnext<CR>
+map <Tab> <C-w>w
