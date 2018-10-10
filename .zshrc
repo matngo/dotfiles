@@ -1,23 +1,27 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/mathias/.oh-my-zsh
+source $HOME/libs/antigen/antigen.zsh
+
 export TERM="xterm-256color"
 
 ZSH_THEME="spaceship"
-plugins=(git zsh-256color zsh-syntax-highlighting zsh-autosuggestions z pip)
 
-source $ZSH/oh-my-zsh.sh
+# Plugins
+antigen bundle git
+antigen bundle pip
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+
+antigen apply
 
 export DEFAULT_USER='mathias'
 export EDITOR='vim'
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 export ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
 
-export WORKON_HOME=$HOME/.envs
-
 alias me="su mathias"
 alias lenny="echo '( ͡° ͜ʖ ͡° )'"
-alias nb="jupyter notebook"
-alias chrome="chromium-browser"
 alias python="python3.7"
 alias pip="pip3.7"
 alias tree="tree -C | less -r"
