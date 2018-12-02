@@ -2,7 +2,8 @@
 source $HOME/libs/antigen/antigen.zsh
 
 export TERM="xterm-256color"
-
+export LANG="en_US.UTF-8"
+export PYTHONPATH="/home/mathias/.local/lib/python3.7"
 ZSH_THEME="spaceship"
 
 # Plugins

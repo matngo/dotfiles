@@ -67,3 +67,6 @@ let g:latex_to_unicode_auto = 1
 " Vue config
 autocmd BufNewFile,BufRead *.vue set ft=vue
 au BufRead,BufNewFile *.vue set filetype=html
+
+"jsonvim
+let g:indentLine_setConceal=0
