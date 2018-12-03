@@ -24,6 +24,7 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'google/vim-searchindex'
+Plugin 'easymotion/vim-easymotion'
 call vundle#end()
 
 

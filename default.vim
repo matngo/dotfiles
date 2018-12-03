@@ -13,6 +13,9 @@ set clipboard=unnamedplus
 set number
 set updatetime=100
 let &guifont=&guifont
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 
 " Virtual env autocompletion config
@@ -26,3 +29,5 @@ endif
 
 filetype plugin indent on 
 syntax enable
+
+autocmd BufNewFile,BufRead *.babelrc set ft=javascript
