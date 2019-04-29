@@ -21,12 +21,9 @@ antigen apply
 export DEFAULT_USER='mathias'
 export EDITOR='vim'
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-export ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
 
 alias me="su mathias"
 alias lenny="echo '( ͡° ͜ʖ ͡° )'"
-alias python="python3.7"
-alias pip="pip3.7"
 alias tree="tree -C | less -r"
 
 SPACESHIP_PROMPT_ORDER=(
@@ -51,3 +48,11 @@ SPACESHIP_TIME_SHOW=true
 
 # added by travis gem
 [ -f /home/mathias/.travis/travis.sh ] && source /home/mathias/.travis/travis.sh
+
+# virtualenvwrapper
+export WORKON_HOME=$HOME/.envs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+source $HOME/.local/bin/virtualenvwrapper.sh
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH 
+

@@ -31,3 +31,12 @@ filetype plugin indent on
 syntax enable
 
 autocmd BufNewFile,BufRead *.babelrc set ft=javascript
+
+" allow backspace
+set bs=2
+
+" Parcel HMR
+set backupcopy=yes
+
+" search
+vnoremap // y/<C-R>"<CR>

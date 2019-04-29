@@ -25,6 +25,9 @@ Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'tpope/vim-repeat'
 Plugin 'google/vim-searchindex'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'Integralist/vim-mypy'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 
 
@@ -42,6 +45,7 @@ let g:ale_fixers = {
 \   'python': ['add_blank_lines_for_python_control_statements', 'isort', 'trim_whitespace'],
 \   'json':['prettier', 'fixjson'],
 \   'javascript': ['eslint'],
+\   'vue': ['eslint'],
 \   'html':['tidy']
 \}
 let g:ale_json_fixjson_options = "-i 2"
@@ -58,8 +62,12 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = 'node_modules'
 
 " Black config
-let g:black_linelength = 100
-autocmd BufWritePre *.py execute ':Black'
+autocmd BufWritePre *.py silent! execute ':Black'
+
+" JS config
+autocmd BufWritePre *.js execute ':ALEFix'
+autocmd BufWritePre *.vue execute ':ALEFix'
+
 
 " Latex Config
 let g:latex_to_unicode_auto = 1
@@ -67,7 +75,6 @@ let g:latex_to_unicode_auto = 1
 
 " Vue config
 autocmd BufNewFile,BufRead *.vue set ft=vue
-au BufRead,BufNewFile *.vue set filetype=html
 
 "jsonvim
 let g:indentLine_setConceal=0
