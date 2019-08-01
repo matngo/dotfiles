@@ -40,3 +40,9 @@ set backupcopy=yes
 
 " search
 vnoremap // y/<C-R>"<CR>
+
+" delete all trailing spaces by pressing <F7>
+nnoremap <silent> <F7> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+" delete buffer
+noremap <Leader>w :bd!<CR>
